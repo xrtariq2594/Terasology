@@ -1,0 +1,5 @@
+{
+    "id" : "combat",
+    "displayName" : "Combat Gameplay",
+    "description" : "This mod introduces Combat Mechanics into Terasology" 
+}
