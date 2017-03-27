@@ -38,7 +38,7 @@ public class MoveItemToSlotsRequest extends AbstractMoveItemRequest {
     }
 
     public MoveItemToSlotsRequest(EntityRef instigator, EntityRef fromInventory, int fromSlot, EntityRef toInventory,
-            List<Integer> toSlots, int changeId, Collection<EntityRef> clientSideTempEntities) {
+            List<Integer> toSlots, int changeId, List<EntityRef> clientSideTempEntities) {
         super(instigator, fromInventory, fromSlot, toInventory, changeId, clientSideTempEntities);
         this.toSlots = toSlots;
     }

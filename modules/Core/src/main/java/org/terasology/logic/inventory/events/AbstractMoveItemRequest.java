@@ -22,6 +22,7 @@ import org.terasology.network.NoReplicate;
 import org.terasology.network.ServerEvent;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  */
@@ -36,13 +37,13 @@ public abstract class AbstractMoveItemRequest implements Event {
     private int changeId;
 
     @NoReplicate
-    private Collection<EntityRef> clientSideTempEntities;
+    private List<EntityRef> clientSideTempEntities;
 
     protected AbstractMoveItemRequest() {
     }
 
     public AbstractMoveItemRequest(EntityRef instigator, EntityRef fromInventory, int fromSlot, EntityRef toInventory, int changeId,
-                                   Collection<EntityRef> clientSideTempEntities) {
+                                   List<EntityRef> clientSideTempEntities) {
         this.instigator = instigator;
         this.fromInventory = fromInventory;
         this.fromSlot = fromSlot;
@@ -75,7 +76,7 @@ public abstract class AbstractMoveItemRequest implements Event {
         return clientSideTempEntities;
     }
 
-    public void setClientSideTempEntities(Collection<EntityRef> clientSideTempEntities) {
+    public void setClientSideTempEntities(List<EntityRef> clientSideTempEntities) {
         this.clientSideTempEntities = clientSideTempEntities;
     }
 }
